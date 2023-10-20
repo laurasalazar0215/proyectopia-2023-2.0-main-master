@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/formulario.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <div class="button">
+            <img src="./img/logo tamales sin fondo (1).png" alt="">
+            <li><a href="./index.html" >inicio</a></li>
+            <li><a href="./nosotros.html" >nosotros</a></li>
+            <li><a href="./reservas.html">reservas</a></li>
+            <li><a href="./encuesta.html">productos</a></li>
+        </div>
+    </nav>
+    <div class="contenedor">
+        <div class="caja1">
+            <h1>Encuesta De Satisfaccion</h1>
+            <form action="/creare" id="encuestaForm" method="post">
+                <p>Como calificas nuestro servicio durante tu visita</p>
+                <div class="campo">
+                    <div class="pregunta"><input type="radio" name="Calificacion" value="1" id="1"><label for="">
+                            1</label></div>
+                    <div class="pregunta"><input type="radio" name="Calificacion" value="2" id="2"><label
+                            for="">2</label></div>
+                    <div class="pregunta"><input type="radio" name="Calificacion" value="3" id="3"><label
+                            for="">3</label></div>
+                    <div class="pregunta"><input type="radio" name="Calificacion" value="4" id="4"><label
+                            for="">4</label></div>
+                    <div class="pregunta"><input type="radio" name="Calificacion" value="5" id="5"><label
+                            for="">5</label></div>
+                </div>
+                <p>Como considera la atencion de nuestros colaboradores</p>
+                <div class="campo2">
+                    <div class="pregunta"><input type="radio" name="Atencion" value="1" id="1"><label for=""> 1</label>
+                    </div>
+                    <div class="pregunta"><input type="radio" name="Atencion" value="2" id="2"><label for="">2</label>
+                    </div>
+                    <div class="pregunta"><input type="radio" name="Atencion" value="3" id="3"><label for="">3</label>
+                    </div>
+                    <div class="pregunta"><input type="radio" name="Atencion" value="4" id="4"><label for="">4</label>
+                    </div>
+                    <div class="pregunta"><input type="radio" name="Atencion" value="5" id="5"><label for="">5</label>
+                    </div>
+                </div>
+                <p>Como califica la calidad de nuestros productos</p>
+                <div class="campo2">
+                    <div class="pregunta"><input type="radio" name="Calidad" value="1" id="1"><label for=""> 1</label>
+                    </div>
+                    <div class="pregunta"><input type="radio" name="Calidad" value="2" id="2"><label for="">2</label>
+                    </div>
+                    <div class="pregunta"><input type="radio" name="Calidad" value="3" id="3"><label for="">3</label>
+                    </div>
+                    <div class="pregunta"><input type="radio" name="Calidad" value="4" id="4"><label for="">4</label>
+                    </div>
+                    <div class="pregunta"><input type="radio" name="Calidad" value="5" id="5"><label for="">5</label>
+                    </div>
+                </div>
+                <p>¿tiene alguna sugerencia sobre nuestro servicio?</p>
+                <div class="campo3">
+                    <textarea name="Sugerencia" cols="30" rows="10"></textarea>
+                </div>
+                <p>¿tiene alguna queja?</p>
+                <div class="campo3">
+                    <textarea name="Queja" cols="30" rows="10"></textarea>
+                </div>
+
+                <button type="submit" id="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('encuestaForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const Calificacion = document.querySelector('input[name="Calificacion"]:checked').value;
+            const Atencion = document.querySelector('input[name="Atencion"]:checked').value;
+            const Calidad = document.querySelector('input[name="Calidad"]:checked').value;
+            const Sugerencia = document.querySelector('textarea[name="Sugerencia"]').value;
+            const Queja = document.querySelector('textarea[name="Queja"]').value;
+
+            axios.post('http://localhost:3006/creare', {
+                Calificacion,
+                Atencion,
+                Calidad,
+                Sugerencia,
+                Queja
+            })
+                .then(response => {
+                    console.log('Respuesta del servidor:', response.data);
+                    alert('se fue')
+                })
+                .catch(error => {
+                    console.error('Error del servidor:', error);
+                    alert('error envio')
+                })
+        });
+        document.getElementById('encuestaForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+        });
+    </script>
+</body>
+
+</html>

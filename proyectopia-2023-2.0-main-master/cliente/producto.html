@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/producto.css">
+</head>
+<body>
+    <nav>
+        <div class="button">
+            <img src="./img/logo tamales sin fondo (1).png" alt="">
+            <li><a href="./index.html" >inicio</a></li>
+            <li><a href="./nosotros.html" >nosotros</a></li>
+            <li><a href="./reservas.html">reservas</a></li>
+            <li><a href="./encuesta.html">encuesta</a></li>
+        </div>
+    </nav>
+    <header>
+        <h1>Tienda</h1>
+
+        <div class="container-icon">
+            <div class="container-cart-icon">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="icon-cart"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                    />
+                </svg>
+                <div class="count-products">
+                    <span id="contador-productos">0</span>
+                </div>
+            </div>
+
+            <div class="container-cart-products hidden-cart">
+                <div class="row-product hidden">
+                    <div class="cart-product">
+                        <div class="info-cart-product">
+                            <span class="cantidad-producto-carrito">1</span>
+                            <p class="titulo-producto-carrito">Pastel de pollo</p>
+                            <span class="precio-producto-carrito">$4000</span>
+                        </div>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="icon-close"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M6 18L18 6M6 6l12 12"
+                            />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="cart-total hidden">
+                    <h3>Total:</h3>
+                    <span class="total-pagar">$200</span>
+                </div>
+                <p class="cart-empty">El carrito está vacío</p>
+            </div>
+        </div>
+    </header>
+    <div class="container-items">
+        <div class="item">
+            <figure>
+                <img
+                    src="https://www.zurichpasteleria.com/wp-content/uploads/2020/04/pastel-de-pollo.jpg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Pastel de pollo</h2>
+                <p class="price">$4000</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img
+                    src="https://img.bekiacocina.com/cocina/0000/265-h.jpg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Empanada de carne</h2>
+                <p class="price">$2500</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img
+                    src="https://i.blogs.es/25a21f/empanadas-de-queso-1-/1366_2000.jpg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Empanada de queso</h2>
+                <p class="price">$3000</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img
+                    src="https://uploads.candelaestereo.com/1/2021/09/como-hacer-palitos-de-queso-destacada.jpg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Palito de queso</h2>
+                <p class="price">$2500</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img
+                    src="https://panaderiamontecarlo.com/wp-content/uploads/2020/05/Bunuelo-Bunuelos-diseno-de-paginas-web-manejo-de-redes-sociales-www-2liondesign.com-2liondesign-2-LION-DESIGN-agencia-de-marketing-digital.jpg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Buñuelo</h2>
+                <p class="price">$1500</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img
+                    src="https://recetasdemitierra.net/wp-content/uploads/2020/06/pandequeso.jpg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Pan de queso</h2>
+                <p class="price">$2000</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img
+                    src="https://www.elespectador.com/resizer/e0YDah1LjHafxsazGoleYqhFx6A=/1200x491/filters:quality(70):format(jpeg)/cloudfront-us-east-1.images.arcpublishing.com/elespectador/T3PRGLJGCFE5FMQK44D4I4BFVM.jpg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Torta casera</h2>
+                <p class="price">$3000</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img
+                    src="https://www.aviatur.com/source/contenidos/gastronomia-colombia/bandeja-paisa-plato-tipico-colombia.jpg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Plato tipico</h2>
+                <p class="price">$21000</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img
+                    src="https://www.aviatur.com/source/contenidos/gastronomia-colombia/bandeja-paisa-plato-tipico-colombia.jpg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Plato tipico</h2>
+                <p class="price">$21000</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img
+                    src="https://www.comedera.com/wp-content/uploads/2022/03/Tamales-colombianosshutterstock_2045038238.jpg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Tamal Tradicional</h2>
+                <p class="price">$14000</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+
+        <div class="item">
+            <figure>
+                <img
+                    src="https://media.istockphoto.com/id/1226335721/es/foto/tamales-mexicanos-tamle-mexicano-comida-picante-en-m%C3%A9xico.jpg?s=612x612&w=0&k=20&c=fJ89Cs9F2ojTEQ4xts4DuPZeDTQGDp4OY5Kr7GparLs="
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Tamal picante</h2>
+                <p class="price">$14000</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img
+                    src="https://colombiavisible.com/wp-content/uploads/2022/04/shutterstock_1176827785-1-1-scaled.jpg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Tamal de pollo</h2>
+                <p class="price">$21000</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img
+                    src="https://vecinavegetariana.com/wp-content/uploads/2022/02/Tamales-colombianos-veganos-standing-1-768x1024.jpeg"
+                    alt="producto"
+                />
+            </figure>
+            <div class="info-product">
+                <h2>Tamal vengano</h2>
+                <p class="price">$21000</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <script src="./productos.js"></script> 
+</body>
+<footer>
+    <h3>Tamalvarez 2023 - todos los derechos reservados</h3>
+</footer>
+
+</html>

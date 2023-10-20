@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(../img/tamal\ banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.342);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 55px;
+    margin-left: 45px;
+}
+
+.button img {
+    width: 100px;
+    height: 100px;
+}
+
+.button li {
+    list-style: none;
+}
+
+.button a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}
+
+.formulario{
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.formulario label{
+    color: white;
+}
+.formulario input{
+    width: 300px;
+    height: 35px;
+    outline: none;
+    border: 1px solid white;
+    background-color: transparent;
+}
+.formulario textarea{
+    border: 1px solid rgb(255, 255, 255);
+    width: 300px;
+    height: 70px;
+    outline: none;
+    background-color: transparent;
+}
+.formulario input::placeholder{
+    color: rgb(255, 255, 255);
+}
+.formulario textarea::placeholder{
+    color: rgb(255, 255, 255);
+}
+.formulario select{
+    width: 300px;
+    height: 35px;
+    outline: none;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: transparent;
+    color: white;
+}
+.formulario button{
+    width: 200px;
+    height: 45px;
+}
+.formulario button{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+    margin-left: 10%;
+}
+.formulario button:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+.contenedor{
+    width: 600px;
+    height: 500px;
+    padding: 25px;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.342);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+}

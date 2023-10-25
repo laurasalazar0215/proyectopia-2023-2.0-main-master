@@ -150,12 +150,29 @@ header{
 
 .cart-total{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cart-total a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #000;
+    height: 60px;
+    
+    border-radius: 0 0 10px 10px ;  
+}
+.pago{
+    display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px 0;
     gap: 20px;
 }
-
 .cart-total h3{
     font-size: 20px;
     font-weight: 700;

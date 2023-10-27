@@ -93,19 +93,22 @@ nav {
     width: 400px;
     height: 350px;
     text-align: justify;
+    font-size: 18px;
+    
 }
 
 .mision p{
-    margin-top: 25px;
+    margin-top: 30px;
 
 }
 .vision{
     width: 400px;
     height: 350px;
     text-align: justify;
+    font-size: 18px;
 }
 .vision p{
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 

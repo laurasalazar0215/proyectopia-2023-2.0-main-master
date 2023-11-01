@@ -1,40 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style/venta.css">
     <link rel="icon" href="./img/logo tamales sin fondo (1).png">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
+
 <body>
     <nav>
         <div class="button">
             <img src="./img/logo tamales sin fondo (1).png" alt="">
-            <li><a href="./index.html" >inicio</a></li>
-            <li><a href="./nosotros.html" >nosotros</a></li>
+            <li><a href="./index.html">inicio</a></li>
+            <li><a href="./nosotros.html">nosotros</a></li>
             <li><a href="./producto.html">productos</a></li>
             <li><a href="./reservas.html">reservas</a></li>
         </div>
     </nav>
     <div class="contenedor">
-        
-        <div class="formulario">
+
+        <form class="formulario" action="/creare" id="domicilio" method="post">
             <label for="">Nombre</label>
-            <input type="text" placeholder="Nombre">
+            <input name="Nombre_cliente" type="text" placeholder="Nombre">
             <label for="">Telefono</label>
-            <input type="text" placeholder="Telefono">
+            <input name="Telefono_cliente" type="text" placeholder="Telefono">
             <label for="">Direccion</label>
-            <input type="text" placeholder="Direccion">
-            <label for="">Metodo de pago</label>
-            <select name="" id="" >
-                <option value="">Efectivo</option>
-                <option value="">Tarjeta</option>
-            </select>
+            <input name="Direccion" type="text" placeholder="Direccion">
+            <label name="" for="">Metodo de pago</label>
+            <div class="conte">
+                <input  name="Metodo_pago" type="radio">Efectivo</input>
+                <input  name="Metodo_pago" type="radio">Tarjeta</input>
+            </div>
             <label for="">Especificacion</label>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Especificacion"></textarea>
+            <textarea name="Especificacion" id="" cols="30" rows="10" placeholder="Especificacion"></textarea>
             <button>Pedir</button>
-        </div>
+        </form>
     </div>
 </body>
+<script>
+    document.getElementById('domicilio').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const Calificacion = document.querySelector('input[name="Nombre_cliente"]').value;
+        const Atencion = document.querySelector('input[name="Telefono_cliente"]').value;
+        const Calidad = document.querySelector('input[name="Direccion"]').value;
+        const Sugerencia = document.querySelector('input[name="Metodo_pago"]:checked').value;
+        const Queja = document.querySelector('textarea[name="Especificacion"]').value;
+
+        axios.post('http://localhost:3006/creare', {
+            Nombre_cliente,
+            Telefono_cliente,
+            Direccion,
+            Metodo_pago,
+            Especificacion
+        })
+            .then(response => {
+                console.log('Respuesta del servidor:', response.data);
+                alert('se fue')
+            })
+            .catch(error => {
+                console.error('Error del servidor:', error);
+                alert('error envio')
+            })
+    });
+    document.getElementById('domicilio').addEventListener('submit', function (event) {
+        event.preventDefault();
+    });
+</script>
+
 </html>

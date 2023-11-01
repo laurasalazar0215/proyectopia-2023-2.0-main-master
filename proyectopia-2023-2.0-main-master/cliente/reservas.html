@@ -6,6 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style/reservas.css">
     <link rel="icon" href="./img/logo tamales sin fondo (1).png">
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <nav>
@@ -20,15 +22,15 @@
     <div class="contenedor">
         <form class="formulario" id="reservaForm" method="post">
             <label for="">Nombre</label>
-            <input type="text" placeholder="Nombre" name="Calificacion">
+            <input type="text" placeholder="Nombre" name="Nombre">
             <label for="">Telefono</label>
-            <input type="text" placeholder="Telefono">
+            <input type="text" placeholder="Telefono" name="Telefono">
             <label for="">Cedula</label>
-            <input type="text" placeholder="Cedula">
+            <input type="text" placeholder="Cedula" name="Cedula">
             <label for="">Fecha</label>
-            <input type="date" placeholder="Cedula">
+            <input type="date" placeholder="Fecha">
             <label for="">Especificacion</label>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Especificacion"></textarea>
+            <textarea name="Especificacion" id="" cols="30" rows="10" placeholder="Especificacion"></textarea>
             <button>Pedir</button>
         </form>
     </div>
@@ -68,4 +70,35 @@
 <footer>
     <h3>Tamalvarez 2023 - todos los derechos reservados</h3>
 </footer>
+
+
+<script>
+    document.getElementById('domicilio').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const Calificacion = document.querySelector('input[name="Nombre"]').value;
+        const Atencion = document.querySelector('input[name="Telefono"]').value;
+        const Calidad = document.querySelector('input[name="Cedula"]').value;
+        const Sugerencia = document.querySelector('input[name="Fecha"]:Date').value;
+        const Queja = document.querySelector('textarea[name="Especificacion"]').value;
+
+        axios.post('http://localhost:3006/creare', {
+            Nombre,
+            Telefono,
+            Cedula,
+            Fecha,
+            Especificacion
+        })
+            .then(response => {
+                console.log('Respuesta del servidor:', response.data);
+                alert('se fue')
+            })
+            .catch(error => {
+                console.error('Error del servidor:', error);
+                alert('error envio')
+            })
+    });
+    document.getElementById('domicilio').addEventListener('submit', function (event) {
+        event.preventDefault();
+    });
+</script>
 </html>
